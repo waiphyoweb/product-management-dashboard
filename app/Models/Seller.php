@@ -10,6 +10,8 @@ class Seller extends Model
 {
     use HasFactory;
 
+    protected $table = 'sellers';
+
     public function products() {
         return $this->hasMany(Product::class);
     }
