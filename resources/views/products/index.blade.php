@@ -13,9 +13,9 @@
             <div class="col-10 mx-auto">
                 <h1>Products</h1>
 
-                @if (session()->has('success'))
+                @if (session()->has('product-create'))
                     <div class="alert alert-success">
-                        {{ session('success') }}
+                        {{ session('product-create') }}
                     </div>
                 @elseif (session()->has('product-delete'))
                     <div class="alert alert-warning">

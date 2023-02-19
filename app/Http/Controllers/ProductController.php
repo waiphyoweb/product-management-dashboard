@@ -61,7 +61,7 @@ class ProductController extends Controller
         $product->seller_id = $request->seller_id;
         $product->save();
 
-        return redirect('/products')->with('success', 'Product is added successfully.');
+        return redirect('/products')->with('product-create', 'Product is added successfully.');
     }
 
     /**
