@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SellerController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -44,6 +45,18 @@ Route::post('/categories/update/{id}', [CategoryController::class, 'update']);
 //Delete
 Route::get('/categories/delete/{id}', [CategoryController::class, 'destroy']);
 
+//Seller Routes
+//Create
+Route::get('/sellers/create', [SellerController::class, 'add']);
+Route::post('/sellers/create', [SellerController::class, 'store']);
+//Read
+Route::get('/sellers', [SellerController::class, 'index']);
+Route::get('/sellers/detail/{id}', [SellerController::class, 'show']);
+//Update
+Route::get('/sellers/update/{id}', [SellerController::class, 'edit']);
+Route::post('/sellers/update/{id}', [SellerController::class, 'update']);
+//Delete
+Route::get('/sellers/delete/{id}', [SellerController::class, 'destroy']);
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

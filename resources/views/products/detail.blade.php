@@ -16,11 +16,11 @@
                             <li class="list-group-item h5">Price: {{ $product->price }} MMK</li>
                             <li class="list-group-item">Category: {{ $product->category->name }}</li>
                             <li class="list-group-item">By: {{ $product->seller->name }}</li>
-                            <li class="list-group-item">
+                            <div class="mt-3">
                                 <a href="{{ url("/products") }}" class="btn btn-outline-secondary btn-sm">Back</a> 
-                                <a href="{{ url("/products/delete/$product->id") }}" class="btn btn-warning btn-sm mx-2">Delete Product</a>    
+                                <a href="{{ url("/products/delete/$product->id") }}" class="btn btn-warning btn-sm ms-2 float-end">Delete Product</a>    
                                 <a href="{{ url("/products/update/$product->id") }}" class="btn btn-primary btn-sm float-end">Edit Product</a>    
-                            </li>
+                            </div>
                         </ul>
                     </div>
                 </div>
