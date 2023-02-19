@@ -2,13 +2,15 @@
 
 @section('content')
     <div class="container">
-        <div class="row">
-            <div>
-                <a href="{{ url("/categories")}} " class="btn btn-outline-secondary float-end btn-sm">Category</a>
-                <a href="{{ url("/sellers")}} " class="btn btn-outline-secondary float-end btn-sm mx-2">Seller</a>
-                <a href="{{ url("/products/create")}} " class="btn btn-outline-secondary float-end btn-sm">Add Product</a>
+        @auth
+            <div class="row">
+                <div>
+                    <a href="{{ url("/categories")}} " class="btn btn-outline-secondary float-end btn-sm">Category</a>
+                    <a href="{{ url("/sellers")}} " class="btn btn-outline-secondary float-end btn-sm mx-2">Seller</a>
+                    <a href="{{ url("/products/create")}} " class="btn btn-outline-secondary float-end btn-sm">Add Product</a>
+                </div>
             </div>
-        </div>
+        @endauth
         <div class="row">
             <div class="col-10 mx-auto">
                 <h1>Products</h1>

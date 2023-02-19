@@ -12,6 +12,8 @@ class Seller extends Model
 
     protected $table = 'sellers';
 
+    protected $fillable = ['name', 'email', 'contact', 'address'];
+
     public function products() {
         return $this->hasMany(Product::class);
     }
