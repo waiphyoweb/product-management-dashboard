@@ -26,6 +26,7 @@ Route::get('/', function () {
 Route::get('/products/create', [ProductController::class, 'add']);
 Route::post('/products/create', [ProductController::class, 'store']);
 //Read
+Route::get('/', [ProductController::class, 'index']);
 Route::get('/products', [ProductController::class, 'index']);
 Route::get('/products/detail/{id}', [ProductController::class, 'show']);
 //Update
