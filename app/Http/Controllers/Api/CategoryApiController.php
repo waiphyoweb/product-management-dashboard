@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
-use PhpParser\Node\Stmt\Catch_;
 
 class CategoryApiController extends Controller
 {
@@ -62,7 +61,7 @@ class CategoryApiController extends Controller
             'name' => 'required',
         ]);
 
-        $category = new Category();
+        $category = Category::find($id);
         $category->name = $request->name;
         $category->save();
     }

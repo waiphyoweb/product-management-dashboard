@@ -70,7 +70,7 @@ class SellerApiController extends Controller
             'address' => 'required',
         ]);
 
-        $seller = new Seller();
+        $seller = Seller::find($id);
         $seller->name = $request->name;
         $seller->email = $request->email;
         $seller->contact = $request->contact;
